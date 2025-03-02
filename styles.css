@@ -1,0 +1,721 @@
+/*
+primary font : some-google-fonts
+secondary font : san serif
+
+!!!!!!!      LEARNING-SECT      !!!!!!!!!!
+
+****(1)position:static; default...(2) FOR OVERLAPPING-ELEMENTS APPLY z-index: 1 or-1; FOR WHICH TO APPEAR OVER ANOTHER
+
+****PS ___  MAKE parent position : relative; THEN MAKE ITS CHILD position:absolute; TO POSITION CHILD RELATIVE TO PARENT
+
+
+****position : absolute; --> effect; makes element behave in a way like ITS REMOVED FROM DOCUMENT and then CAST TO ABSOLUTELY TO SCREEN  DOCUMENT 
+
+
+!!!!!!!      LEARNING-SECT      !!!!!!!!!!
+
+
+
+
+@@@@@@@  TIPS          PS... NOTE BEFORE    @@@@@@@
+
+
+      (1)AVOID percentage-lengths for parents
+      (2) 
+
+
+
+@@@@@@   TIPS/PS/NB ENDS    ....        @@@@@@@@@@
+
+
+I NAMED ALL <h2> BY .subtitle
+
+
+to body-tag:  [ FOR GOOGLE FONTS 
+      font-family : name-of-google-font ;  ]
+      
+      
+      
+
+STYLES I PREVIOISLY WANTED:
+
+(1)AT p.intro-p STYLES .first-letter{
+      display : block;
+      font-size : 3cm;
+      float : left;
+      color : red;
+}
+
+(2) section.intro TO DISPLAY flex/grid STYLES CURRENTLY AT FLEX...; display : grid;grid-template-columns : 1fr 1fr;
+
+(3) div.alphabets T0... font-size : 2cm; BCZ I ACTUALLY WANT BIG HEADING OF MY SITE AS BIG UNCONVENTIONAL alphabets OF MY NAME...STYLES TO ADD IS BIG UNORDERED alphabets OF MY NAME +++ WITH TRANSITION OR ANIMATION AT 0%{shows text question "COULD YOU HAVE GUESSED THE NAME OF THE PERSON OR DO...? "} &&& AT 100%{shows ISHMAEL}
+
+
+to p.what-i-am CSS DOC @line165  : [   margin-bottom : 3cm;
+      padding-bottom : 90px;
+      padding : 90px;    ]
+
+to main-html-tag: [    background : url("./20231101_063909.jpg"); 
+      background-size : 100vw 100vh;    ]
+      
+      
+      $
+      $
+      $
+*/
+
+
+
+/*
+********* ___________GLOBAL ELEMENTS------------- *******
+
+:root{
+      font-family : ariel;
+      
+      background : black;
+      color : whitesmoke;
+     
+      font-size : 1.125rem;
+      line-height : 1.5;
+      margin : 0;
+      padding : 0;
+      width : 100%;
+      
+}
+main{
+      height : 100vh;
+      
+      background : ; lightblue
+}
+#lower-scrollbar{
+      width : 100%;
+      height : 30px;
+      
+      color : coral;
+      background-color : coral;
+}
+
+#upper-scrollbar{
+      width : 100%;
+      height : 15px;
+      padding : 27px;
+      
+      position : fixed;
+      justify-content : centre;
+      color : white;
+      background-color : coral;
+      
+      
+}
+#bar-content{
+      opacity : 0.3px;
+} 
+
+*{
+      box-sizing : border-box;
+      
+      
+}
+*/
+
+
+
+
+
+
+body{
+  /*
+  overflow-x : hidden;
+  background : url("Screenshot_20240623-234455_Chrome.jpg");
+  background-size : cover;
+  background-position : centre;
+  background-repeat : none;
+  line-height : 1.5; 
+  */
+  
+  max-width : 100%;
+  overflow-x : hidden;
+  position : relative;
+  background-position : centre;
+  
+  font-family : ariel;
+  background-color : black;
+  color : whitesmoke;     
+  font-size : 1.125rem;
+  margin : 0;
+  padding : 0;            
+}
+
+section{
+ /* border : solid white 1px; */
+ margin : 0px;
+ padding : 0;
+ 
+  
+}
+section img{
+  max-width : 100%;
+
+}
+
+h1{
+  font-weight : 1000;
+}
+
+h2{
+  color : rgb(255,255,25);
+  font-weight : 900;
+  width : 100%;
+  font-size : 3rem;
+  text-shadow : 2px 1px pink;
+  
+}
+
+div{
+  box-sizing : border-box;
+}
+
+p{
+  font-size : 15px;
+  font-weight : 600;
+  line-height : 0.5cm;
+}
+
+button {
+  border : 3px solid pink;
+  background-color : rgba(3,6,9,0.3);
+}
+
+img{
+  object-fit : cover;
+  
+}
+
+a{
+  color : #CDE780;  
+  
+}
+
+#footer{
+  color : coral;
+}
+
+/*___END----___END OF GLOBAL VARIABLES___END___*/
+
+
+
+
+
+#space{
+  display : hidden;
+  
+  font-size : 3cm; 
+  background : black;
+  height : 600px;
+  color : black;
+  border : none;
+  z-index : -2;     
+}
+#space p{
+  opacity : 0;
+  z-index : -2;
+}
+
+
+
+
+
+
+/* **********ultimate overall background pic
+  *********
+  ******* section.ult-bg section#ult-bg
+  *** img#global-bg
+
+.ult-bg{
+  width : 100%;
+  height : 92.6vh;
+  //float : top;
+  position : fixed;
+  top : 0;
+  left : 0;
+  z-index : -1;
+  object-fit : cover;
+                          
+  
+}
+#global-bg{
+  z-index : -1;
+}
+
+WANTED SITCKED AND FIXED IMAGE/VIDEO background
+section.intro
+
+.intro{
+  
+  
+  background : linear-gradient(to top,rgba(0,0,0,0.3),pink,url(20231101_063909.jpg));
+  background-position : centre;
+  background-size : cover;
+
+
+
+ background : url("Screenshot_20240623-234455_Chrome.jpg"); 
+
+  
+  display : flex;
+  flex-direction : column;
+  height : 96vh;
+  justify-content : space-around;
+}     
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+#intro OR section.intro div.div-header 
+ACTUALLY... [section.intro(or section#intro) div.div-header ]
+*/      
+.div-header{
+  /*
+  position : fixed;
+  left : 50%;
+  top : 30px;
+  z-index : 1; 
+  
+  WANTED MY NAME FIXED ON SCREEN NO-MATTER WHERE 
+  */
+  
+  font-family : Roboto;
+  height : 9cm;
+  padding-left : 300px;
+  text-shadow : 3px 0 3px whitesmoke;  
+  
+     
+  animation-name : fading-appearing;
+  animation-duration : 9s;
+  animation-direction : alternate;
+  
+  animation-iteration-count : infinite;
+ }
+
+@keyframes fading-appearing{
+  0%{
+        opacity : 0.2;
+  }
+  
+  50%{
+        opacity : 0.5;
+  }
+  
+  75%{
+        opacity : 0.8;
+  }
+  
+  100%{
+        opacity : 1;
+  }
+}      
+    
+.alphabets{
+  font-family : monospace;
+  font-size : 3cm;
+  box-shadow : 3px 3px 3px whitesmoke;
+  text-decoration : none;
+  color : rgb(255,255,25);
+  text-shadow : 2px 3px pink;
+  background  : linear-gradient(to right, black,pink);
+
+}
+
+
+
+/*
+parent <article>
+child div.intro-article 
+OF FOLLOWING ELEMENT...
+
+ITS MOTHER PARENT section.intro and section#intro
+*/
+
+#intro-article{           
+  font-family : monospace;
+  text-decoration : none;
+  
+  
+  animation-name : nav-links;
+  animation-duration : 10s;
+  animation-direction : alternate;
+  
+  animation-iteration-count : infinite;
+} 
+@keyframes nav-links{
+  0%{
+        opacity : 0;
+  }
+  
+  50%{
+        opacity : 0.5;
+        box-shadow : 3px 3px 3px whitesmoke;
+  }
+  
+  100%{
+        opacity : 1;
+  }
+  
+}
+
+
+/*
+.intro-p{
+  //text-shadow : 2px 0.5px darkgrey;
+  
+  font-weight : 990;
+  line-height : 0.5cm;
+  font-size : 12px;
+  opacity : 0.9;
+  
+  
+  HERE MAKE .intro-p TRANSIT TO LARGER FONT-SIZE
+  transition : all 12s       
+} 
+*/
+
+
+article .intro-article{
+  box-sizing : border-box;
+  
+  
+}
+
+article .intro-article a{
+  border : 1px solid yellow;
+}
+
+
+
+
+
+
+
+
+
+/* 
+
+@@@@@@@@@@@@@END OF INTRO SECTION#intro OR section.intro
+*
+*
+*
+*/
+
+
+
+
+
+
+/*@line 64  PARENT'S    section#more-info
+CHILD'S     div.more-info
+
+OF FOLLOWING div.more-info is...next...
+*/
+.more-info{
+  position : relative;
+  padding-top : 60px;
+  padding-bottom : 60px;
+  
+  width : 369px;
+  overflow-x : hidden;
+  
+}
+
+.more-info h2{
+  line-height : 1.5cm;
+}
+
+/*
+@div.more-info   I.E  p.what-i-am CHILD-ELEMENT OF   div.more-info   DIV-ELEMENT WHOSE ALSO CHILD OF   section#more-info
+*/
+
+.what-i-am{
+
+  padding-bottom : 90px;
+  margin : 0;
+  
+  } 
+#b-caption{
+  font-size : 3px;
+  font-weight : 900;
+  border : none;
+  color : rgb(255,255,25);
+}
+.b-header{
+  position : relative;
+}
+.b-header h2{
+  position : absolute;
+  display : float;
+  top : -600px;
+  z-index : 1;
+}       
+  
+.influences{
+  position : relative;
+}
+.div-influences{
+  padding-top : 9cm;
+}
+#influ-bg{
+  position : absolute;
+  z-index : -1;
+  opacity : 0.3;
+}
+
+
+/* HERE I WANTED background be MOON-IMG then linear-gradient(black,white)   BUT STYLE NOT APPLICABLE YET 
+#bg{
+  position : absolute;
+  top : 90px;
+  left : 0;
+  
+  height : 300px;
+  z-index : -1;
+} 
+*/      
+  
+  
+  
+#bio-parents{
+  padding-bottom : 150px;
+  padding-top : 300px;
+  background-color : black;
+  
+  /* background-color : linear-gradient(black,white); */
+  
+  display : flex;
+  flex-direction : row;
+  justify-content : space-around;
+}
+
+#bio-parents p{
+  padding-top : 30px;
+  font-size : 12px;
+}
+
+#bio-parents{
+  position : relative;
+}
+
+
+#pic-of-parents{
+  width : 200px;
+  height : 200px;
+  /* padding : 30px; */
+  
+  border-radius : 50%;
+} 
+
+#post-birth{
+  padding-top : 1.5cm;
+  padding-bottom : 1cm;
+}
+
+/*
+div.gym-pic wrapping img#gym-pic  
+*/    
+.gym-pic{
+  position : relative;
+  
+  display : flex;
+  flex-direction : row;
+  justify-content : centre;
+}
+
+#gym-pic{
+  width : 200px;
+  height : 200px;
+  
+  
+  object-fit : cover;
+  object-position : centre left;
+  z-index : -1;
+  
+  border-radius : 100%;
+}
+#gym-pic p{
+  position : absolute;
+  left : -600px;
+  top : 0;
+}
+  
+#where-i-end{
+  padding-top : 1.5cm;
+  border : none;
+  border-radius : 30%;
+  
+}      
+  
+/*
+  section#more-info  ---> div.more-info  -> button.
+  PS there are two divs of class more-info!
+*/  
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+@line123 section.gallery |
+
+                     V
+                     
+
+
+*/  
+
+        
+
+/* FOLLOWING IS SECTION#GALLERY or section#gallery ...HOLDING ALL CONTENTS OF GALLERY */
+#gallery{
+  margin : 0;
+  
+  width : 100%;
+  height : 99vh;
+  border : 1px solid red;
+  box-sizing : border-box;
+}
+
+/* HERE IS div#pics-bag under section#gallery
+              |
+              \/
+   container of all pic-card
+*/
+#pics-bag{
+  margin : 1px;
+  border : 3px dotted red;      
+  position : relative;
+  padding : 9px;
+  
+  display : flex;
+  flex-direction : row;
+  overflow-x : auto;
+  
+}
+
+/*
+INDIVIDUAL CARD PIC ITEM aka div.pics-card
+  
+  UNDER DIV#PICS-BAG
+
+*/
+.pics-card{
+ 
+  border : 2px solid pink;
+}
+
+/*    images' SUBTITLES
+     fig-caption.pics-caption tag
+              |
+             \/
+              under div#pics-card
+*/
+.pics-caption{
+ line-height : 30px;
+ display : block;
+align-self : centre;
+  padding : 30px;
+ margin : 0px; 
+}
+
+/*
+card of individual pic aka div.pics-card
+              |
+             \/
+             under div#pics-card
+             
+#pics-bag div{
+  padding-left : 30px;
+  display : block;
+  align-self : centre;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+.inquire-form{
+  display : flex;
+  flex-direction : column;
+  justify-content : space-around;
+  
+  /*
+  margin-top : 9cm;
+  padding-top : 9cm;
+  */
+}
+
+
+
+.form{
+  display : flex;
+  flex-direction : column;
+  justify-content : centre;
+}
+
+#send-form{
+  font-size : 1.5rem;
+  width : 30%;
+  padding-left : 300px;
+  border : none;
+}
+
+#form-item{
+  padding : 20px;
+  align-self : center;
+}
+
+
+
+
+
+
+
+
+.social-connect{
+  display : flex;
+  flex-direction : column;
+  list-style : none;
+}
+
+.social-media-link{
+  padding : 30px;
+  text-decoration : none;
+  list-style : none;
+}
